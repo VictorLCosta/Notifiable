@@ -16,7 +16,7 @@ namespace Notifiable.Application.PasswordHasher
             argon2.Salt = CreateSalt();
             argon2.DegreeOfParallelism = 8;
             argon2.Iterations = 4;
-            argon2.MemorySize = 1024 * 1024;
+            argon2.MemorySize = 1024 * 4;
 
             return await argon2.GetBytesAsync(16);
         }
